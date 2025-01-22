@@ -12,13 +12,11 @@ const app = express();
 
 // Middleware
 
-const corsOptions = {
-  origin: '*', // Replace with your frontend domain
-};
+
 
 
 app.use(bodyParser.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 // Routes
 app.use('/api/campaigns', campaignRoutes);
